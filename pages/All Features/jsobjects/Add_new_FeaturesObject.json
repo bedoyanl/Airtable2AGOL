@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "Add_new_FeaturesObject",
+    "pageId": "All Features",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t\n\t\n\tlogout: ()=> {\n    storeValue(\"user\", undefined);\n\t\tstoreValue(\"pass\", undefined);\n},\n   \n\n\t\thandleAdded: (response) => {\n\t\t\tconsole.log(response);\n        document.getElementById(\"result-add\").textContent = JSON.stringify(response, null, 2);\n        if (!response.addResults[0].success) {\n          // stop early if adding a new feature was not successful\n          return;\n\t\t\t\t}\n\t\t},\n\t\n\t\tatable: () => {Create_Records.run();},\n\t\tsave: () => {\n\t\t//Create_Records.run();\n\t\t//const featureToAdd = Airtable_All_Features.selectedRow;\n\t\t\tconst featureToAdd = \n        {\n      attributes: {\n        OBJECTID: ObjectID.text,\n        InspectorName: inspectorname.text,\n        Location: Location.text,\n        DamageType: Damagetype.text\n      }\n     \n};\n\tconst featureServiceLayerUrl =\"https://services7.arcgis.com/2W8lpZwpSVmtY9Tc/arcgis/rest/services/TEST_SIMPLE_FEMO/FeatureServer/0\";\n\t\t\t\n\t\t\n\t\n\t\t\tADD_SERVICE_token.run({url: featureServiceLayerUrl,\n  features: [featureToAdd]\n}).then(this.handleAdded)\n\t\t\t\t.then((response) => showAlert(response) )\n    .catch((error) => showAlert(error, 'error'));\n\t\t\t\n\t\t\tGET_SERVICE_token.run();\n\t\t\t\n\t},\n\t\n    }\n    \n    \n    ",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "All Features_Add_new_FeaturesObject",
+  "deleted": false,
+  "gitSyncId": "63488152e0528e5b0f759728_63497f780c4af9738a7ae774"
+}

@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "id": "All Features",
+      "isDefault": true
+    },
+    {
+      "id": "Field Info",
+      "isDefault": false
+    },
+    {
+      "id": "FeatureService Oauth2 Test",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#D6D1F2",
+  "icon": "chinese-remnibi",
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "deleted": false
+}
