@@ -3,14 +3,6 @@
     {
       "id": "All Features",
       "isDefault": true
-    },
-    {
-      "id": "Field Info",
-      "isDefault": false
-    },
-    {
-      "id": "FeatureService Oauth2 Test",
-      "isDefault": false
     }
   ],
   "viewMode": false,
